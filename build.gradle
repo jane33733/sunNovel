@@ -164,8 +164,7 @@ dependencies {
     //compile 'org.springframework.boot:spring-boot-starter:1.2.7.RELEASE'
   	compile 'org.quartz-scheduler:quartz:2.2.2'
   	compile 'org.springframework:spring-context-support:4.1.8.RELEASE'
- 
- 	runtime 'javax.el:el-api:2.2'   
+  
 }
 
 compileJava.options.encoding = 'UTF-8'
@@ -174,7 +173,7 @@ tomcat {
     httpPort = 8080
     httpsPort = 8443
     enableSSL = true
-    contextPath = 'janePractice'
+    contextPath = 'novel'
 }
 
 // 設置 Project Facets
