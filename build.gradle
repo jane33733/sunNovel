@@ -11,6 +11,7 @@ sourceCompatibility = 1.8   // 設置 JDK 版本
 targetCompatibility = 1.8	// 打包war的jdk版本
 webAppDirName = 'WebContent'    // 設置 WebApp 根目錄
 
+ext.createdDate = new Date().format("yyyy-MM-dd HH:mm")
 
 sourceSets {
     main {
