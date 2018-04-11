@@ -6,6 +6,8 @@
 <head>
 
 <link href="<c:url value='/css/bootstrap.min.css'/>" rel="stylesheet" media="screen">
+<link href="<c:url value='/css/bootstrap-theme.css'/>" rel="stylesheet" media="screen">
+<link href="<c:url value='/css/bootstrap.css'/>" rel="stylesheet" media="screen">
 <link href="<c:url value='/css/jquery-ui.min.css'/>" rel="stylesheet" media="screen">
 
 <script src="<c:url value='/js/jquery-1.11.2.min.js'/>"></script>
