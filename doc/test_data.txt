@@ -3,3 +3,5 @@
 
 INSERT INTO `novel`.`user_account` (`id`, `name`) VALUES ('1', 'jane');
 INSERT INTO `novel`.`user_account` (`id`, `name`) VALUES ('2', '測試玩家');
+
+INSERT INTO `novel`.`save_point` (`id`, `user_account_id`, `chapter_page`, `description`, `status_id`, `update_time`) VALUES ('1', '1', 'C01-1', '剛開始', '1', '2018-04-30 23:04:43');

@@ -2,17 +2,17 @@ package com.sun.respose.vo;
 
 import java.util.List;
 
-import com.sun.entity.Product;
+import com.sun.entity.UserAccount;
 
 public class ProductList {
 
-	private List<Product> productList;
+	private List<UserAccount> productList;
 
-	public List<Product> getProductList() {
+	public List<UserAccount> getProductList() {
 		return productList;
 	}
 
-	public void setProductList(List<Product> productList) {
+	public void setProductList(List<UserAccount> productList) {
 		this.productList = productList;
 	}
 	
