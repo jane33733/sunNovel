@@ -13,17 +13,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.google.gson.Gson;
 import com.sun.entity.SavePoint;
 import com.sun.service.SavePointService;
-import com.sun.service.impl.SavePointServiceImpl;
 
 @Controller
-@RequestMapping(value = "userSave")
-public class UserSaveController {
+@RequestMapping(value = "savePoint")
+public class SavePointController {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(UserSaveController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SavePointController.class);
 	private Gson gson = new Gson();
 
 	@Autowired
-	private SavePointService savePointService = new SavePointServiceImpl();
+	private SavePointService savePointService;
 	
 //	@ResponseBody
 //    @RequestMapping(value = "getByPrice", method = RequestMethod.POST)

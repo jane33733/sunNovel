@@ -4,10 +4,10 @@ var character;
 var productList = [];
 var mainUrl = $("#mainUrl").val();
 
-
 function loadGame(){
+	var loadAccount = $("#loadAccount").val();
 	jQuery.ajax({
-	    url: mainUrl + "user/loadGame.do",
+	    url: mainUrl + "savePoint/loadGame.do?name=" + loadAccount,
 	    dataType: "json",
 	    type: "GET",
 	    contentType: 'application/json; charset=utf-8',

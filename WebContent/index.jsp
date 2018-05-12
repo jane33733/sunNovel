@@ -7,6 +7,7 @@
 <head>
 
 <jsp:include page="/pages/basicPage.jsp"></jsp:include>
+<script src="<c:url value="/js/pages/index.js"/>"></script>
 <link href="<c:url value='/css/dark-theme.css'/>" rel="stylesheet" media="screen">
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -39,7 +40,7 @@
 							<div class="form-group">
 								<input type="text" id="newAccount" name="newAccount" placeholder="最多20字" class="form-control" maxlength="20">
 								<br/>
-								<button type="submit" id="newGameBtn" value="newGame" class="btn btn-secondary fr">
+								<button type="submit" id="newGameBtn" value="newGame" class="btn btn-secondary fr" onclick="loadGame()">
 								進入遊戲
 								</button>
 							</div>
@@ -56,7 +57,7 @@
 							<div class="form-group">
 								<input type="text" id="loadAccount" name="loadAccount" placeholder="最多20字" class="form-control" maxlength="20">
 								<br/>
-								<button type="submit" id="loadGameBtn" value="loadGame" class="btn btn-secondary fr">
+								<button type="submit" id="loadGameBtn" value="loadGame" class="btn btn-secondary fr" onclick="loadGame()">
 								載入遊戲
 								</button>
 							</div>				

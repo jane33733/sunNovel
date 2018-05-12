@@ -12,15 +12,12 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ImportResource(locations = {"file:WebContent/WEB-INF/applicationContext.xml",
-		"file:WebContent/WEB-INF/context-dispatcher.xml", "file:WebContent/WEB-INF/spring-views.xml"})
 public class DataBaseConfig {
 
 	@Bean(name = "dataSource")
