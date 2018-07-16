@@ -2,7 +2,7 @@ package backEnd;
 
 import org.junit.Test;
 
-import com.sun.controller.SavePointController;
+import com.sun.controller.SaveDataController;
 
 public class SavePointTest {
 
@@ -10,7 +10,7 @@ public class SavePointTest {
 	@Test
 	public void test() {
 		try {
-			SavePointController controller = new SavePointController();
+			SaveDataController controller = new SaveDataController();
 			controller.loadGame("jane");
 			System.out.println("the end");
 		} catch (Exception e) {

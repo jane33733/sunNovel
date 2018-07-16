@@ -1,5 +1,8 @@
 package com.sun.entity;
 
+
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,6 +18,12 @@ public class UserAccount {
 	
 	@Column(name = "name")
 	private String name;
+	
+	@Column(name = "password")
+	private String password;
+	
+	@Column(name = "update_time", columnDefinition="DATETIME")
+	private Date updateTime;
 	
 	
 	public UserAccount(){}
@@ -34,6 +43,18 @@ public class UserAccount {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public Date getUpdateTime() {
+		return updateTime;
+	}
+	public void setUpdateTime(Date updateTime) {
+		this.updateTime = updateTime;
 	}
 	
 }

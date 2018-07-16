@@ -7,14 +7,14 @@ import org.hibernate.SQLQuery;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sun.entity.SavePoint;
+import com.sun.entity.SaveData;
 
 @Transactional
 @Repository
-public class SavePointDao extends BaseDao{
+public class SaveDataDao extends BaseDao{
 
-	public List<SavePoint> loadGame(String name) {
-		List<SavePoint> savePointList =  new ArrayList<>();
+	public List<SaveData> loadGame(String name) {
+		List<SaveData> savePointList =  new ArrayList<>();
 		final StringBuilder str = new StringBuilder();
 		str.append(" SELECT * FROM save_point ");
 		str.append(" WHERE user_account_id IN ( ");
@@ -24,12 +24,12 @@ public class SavePointDao extends BaseDao{
 		
 		SQLQuery query = this.sessionFactory.getCurrentSession().createSQLQuery(str.toString());
 		query.setParameter("name",name);
-		query.addEntity(SavePoint.class);
+		query.addEntity(SaveData.class);
 		
 		List resultList = query.list();
 		
 		for (int i = 0; i < resultList.size(); i++) {
-			SavePoint sp = (SavePoint)resultList.get(i);
+			SaveData sp = (SaveData)resultList.get(i);
 			savePointList.add(sp);
 		}
 		

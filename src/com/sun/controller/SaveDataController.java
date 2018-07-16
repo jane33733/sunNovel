@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
-import com.sun.entity.SavePoint;
-import com.sun.service.SavePointService;
+import com.sun.entity.SaveData;
+import com.sun.service.SaveDataService;
 
 @Controller
-@RequestMapping(value = "savePoint")
-public class SavePointController {
+@RequestMapping(value = "saveData")
+public class SaveDataController {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(SavePointController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(SaveDataController.class);
 	private Gson gson = new Gson();
 
 	@Autowired
-	private SavePointService savePointService;
+	private SaveDataService saveDataService;
 	
 //	@ResponseBody
 //    @RequestMapping(value = "getByPrice", method = RequestMethod.POST)
@@ -34,11 +34,11 @@ public class SavePointController {
     
     @ResponseBody
     @RequestMapping(value = "loadGame", method = RequestMethod.GET)
-    public List<SavePoint> loadGame(String name){
+    public List<SaveData> loadGame(String name){
         LOGGER.debug("[loadGame]------ Start ");
-        List<SavePoint> savePointList = null;
+        List<SaveData> savePointList = null;
         try {
-        	savePointList = savePointService.loadGame(name);
+        	savePointList = saveDataService.loadGame(name);
         	LOGGER.info(gson.toJson(savePointList));
 		} catch (Exception e) {
 			LOGGER.error("[loadGame]{}",e);
